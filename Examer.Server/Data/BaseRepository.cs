@@ -13,8 +13,7 @@ namespace Examer.Server.Data
 
         public async Task<TEntity> CreateAsync(TEntity entity)
         {
-            Console.WriteLine("бляСоздал");
-            Console.WriteLine(entity.ToString());
+            
             if (entity == null) throw new ArgumentNullException(nameof(entity));
 
             await _context.AddAsync(entity);
